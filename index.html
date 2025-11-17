@@ -1,0 +1,817 @@
+<head>
+  <meta property="og:title" content="신혜미 Financial Advisor | WHOLELIFE">
+  <meta property="og:description" content="여기를 눌러 링크를 확인하세요.">
+  <meta property="og:image" content="https://tscompany0.github.io/이미지파일명.png">
+  <meta property="og:url" content="https://tscompany0.github.io/">
+  <meta property="og:type" content="website">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://tscompany0.github.io/이미지파일명.png">
+</head>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>신혜미 Financial Advisor | WHOLELIFE</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg-1: #020617;
+      --bg-2: #020617;
+      --bg-3: #020617;
+
+      --card-bg: rgba(15, 23, 42, 0.96);
+      --card-border: rgba(148, 163, 184, 0.55);
+
+      --text-main: #f9fafb;
+      --text-sub: #9ca3af;
+
+      --button-bg: #020617;
+      --button-border: rgba(148, 163, 184, 0.55);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Noto Sans KR", sans-serif;
+      background:
+        radial-gradient(circle at 0% 0%, #1e293b, transparent 55%),
+        radial-gradient(circle at 100% 0%, #0f172a, transparent 60%),
+        linear-gradient(180deg, var(--bg-1), var(--bg-3));
+      color: var(--text-main);
+      min-height: 100vh;
+    }
+
+    .page {
+      max-width: 520px;
+      margin: 24px auto 40px;
+      padding: 0 16px;
+    }
+
+    /* 메인 카드 */
+    .card {
+      background: var(--card-bg);
+      border-radius: 26px;
+      border: 1px solid var(--card-border);
+      box-shadow:
+        0 30px 80px rgba(0, 0, 0, 0.9),
+        0 0 0 1px rgba(15, 23, 42, 0.8);
+      padding: 28px 22px 26px;
+      backdrop-filter: blur(22px);
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* 로고 영역 */
+    .brand {
+      margin-bottom: 18px;
+      text-align: center;
+    }
+
+    .brand-logo {
+      width: 90%;
+      max-width: 300px;
+      margin: 0 auto 12px;
+      opacity: 1;
+    }
+
+    .tagline-small {
+      font-size: 0.92rem;
+      color: var(--text-sub);
+      font-weight: 600;
+    }
+
+    /* 프로필 */
+    .profile {
+      margin-top: 18px;
+      margin-bottom: 22px;
+      text-align: center;
+    }
+
+    .profile-photo-wrap {
+      width: 100%;
+      max-width: 460px;
+      height: 450px;
+      border-radius: 20px;
+      overflow: hidden;
+      margin: 0 auto 14px;
+      border: 1px solid rgba(148, 163, 184, 0.8);
+      box-shadow:
+        0 16px 46px rgba(15, 23, 42, 0.95),
+        0 0 0 4px rgba(15, 23, 42, 0.95);
+      background: #020617;
+    }
+
+    .profile-photo-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 5%;
+    }
+
+    .profile-tag {
+      display: inline-flex;
+      padding: 4px 16px;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.96);
+      border: 1px solid rgba(56, 189, 248, 0.7);
+      font-size: 0.82rem;
+      color: #38bdf8;
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
+
+    .profile-name {
+      font-size: 1.9rem;
+      font-weight: 700;
+    }
+
+    .profile-name span {
+      font-size: 1.05rem;
+      color: var(--text-sub);
+      margin-left: 4px;
+      font-weight: 600;
+    }
+
+    .profile-role {
+      font-size: 1rem;
+      color: var(--text-sub);
+      margin-top: 4px;
+      margin-bottom: 12px;
+      font-weight: 600;
+    }
+
+    .profile-desc {
+      font-size: 0.93rem;
+      color: var(--text-sub);
+      line-height: 1.65;
+      max-width: 390px;
+      margin: 0 auto;
+      font-weight: 500;
+    }
+
+    /* 버튼 리스트 */
+    .link-list {
+      margin: 24px 0 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .link-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 13px 18px;
+      border-radius: 999px;
+      background: var(--button-bg);
+      border: 1px solid var(--button-border);
+      box-shadow: 0 14px 34px rgba(0, 0, 0, 0.7);
+      transition: all 0.2s ease;
+      cursor: pointer;
+    }
+
+    .link-item.white {
+      background: #ffffff;
+      border: 1px solid #d0d4d8;
+      color: #0b1120;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+    }
+
+    .link-item.white:hover {
+      box-shadow:
+        0 0 16px rgba(148, 163, 184, 0.6),
+        0 8px 20px rgba(0, 0, 0, 0.5);
+      transform: translateY(-2px);
+    }
+
+    .link-item-main {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .link-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 999px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.05rem;
+      background: rgba(11, 17, 32, 0.08);
+      overflow: hidden;
+      border: 1px solid rgba(11, 17, 32, 0.15);
+    }
+
+    .link-icon img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .link-text-title {
+      font-size: 1rem;
+      font-weight: 600;
+      color: inherit;
+    }
+
+    .link-text-sub {
+      font-size: 0.82rem;
+      font-weight: 400;
+      color: var(--text-sub);
+      margin-top: 2px;
+    }
+
+    .link-arrow {
+      font-size: 1rem;
+      color: var(--text-sub);
+      font-weight: 600;
+    }
+
+    .social-bar {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      margin: 4px 0 14px;
+    }
+
+    .social-btn img {
+      width: 32px;
+      height: 32px;
+      border-radius: 12px;
+      background: #ffffff0a;
+      padding: 4px;
+      object-fit: contain;
+    }
+
+    /* 유튜브 카드 */
+    .video-section {
+      margin: 0 0 28px;
+    }
+
+    .video-link-card {
+      display: block;
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      box-shadow: 0 16px 40px rgba(15, 23, 42, 0.9);
+      background: #020617;
+      padding: 16px 18px;
+      transition: 0.2s ease;
+    }
+
+    .video-link-card:hover {
+      box-shadow:
+        0 0 20px rgba(0, 185, 255, 0.4),
+        0 12px 26px rgba(0, 0, 0, 0.6);
+      transform: translateY(-2px);
+    }
+
+    .video-link-inner {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .video-thumb {
+      width: 72px;
+      height: 48px;
+      border-radius: 12px;
+      overflow: hidden;
+      background: transparent;
+    }
+
+    .video-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .video-text-title {
+      font-size: 0.96rem;
+      font-weight: 600;
+    }
+
+    .video-text-sub {
+      font-size: 0.82rem;
+      color: var(--text-sub);
+      font-weight: 400;
+    }
+
+    /* 전문 분야 영역 */
+    .info {
+      border-top: 1px solid rgba(148, 163, 184, 0.35);
+      padding-top: 13px;
+      margin-top: 4px;
+      margin-bottom: 6px;
+    }
+
+    .info-title {
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .info-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .badge {
+      font-size: 0.74rem;
+      padding: 4px 8px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.8);
+      font-weight: 600;
+    }
+
+    .footer {
+      border-top: 1px solid rgba(148, 163, 184, 0.35);
+      margin-top: 10px;
+      padding-top: 10px;
+      font-size: 0.76rem;
+      color: var(--text-sub);
+      font-weight: 500;
+    }
+
+    .footer a {
+      text-decoration: underline;
+    }
+
+    /* ======================
+       상담 신청 박스
+    ======================= */
+    .consult-section {
+      margin: 0 0 26px;
+    }
+
+    .consult-card {
+      background: #e7f0ff;
+      border-radius: 24px;
+      padding: 20px 18px 18px;
+      box-shadow: 0 10px 26px rgba(15, 23, 42, 0.25);
+      color: #111827;
+    }
+
+    .consult-title {
+      font-size: 1.02rem;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 6px;
+    }
+
+    .consult-sub {
+      font-size: 0.84rem;
+      color: #6b7280;
+      text-align: center;
+      margin-bottom: 16px;
+    }
+
+    .consult-form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .consult-field {
+      background: #ffffff;
+      border-radius: 999px;
+      border: 1px solid #e1e7f0;
+      padding: 0 18px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+    }
+
+    .consult-input {
+      border: none;
+      outline: none;
+      flex: 1;
+      font-size: 0.9rem;
+      color: #111827;
+      background: transparent;
+    }
+
+    .consult-input::placeholder {
+      color: #b9c0cb;
+    }
+
+    .consult-phone-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      width: 100%;
+    }
+
+    .consult-country {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.9rem;
+      color: #111827;
+      white-space: nowrap;
+    }
+
+    .consult-flag {
+      font-size: 1.05rem;
+    }
+
+    .consult-country-arrow {
+      font-size: 0.72rem;
+      color: #9ca3af;
+      margin-left: 2px;
+    }
+
+    .consult-phone-input {
+      flex: 1;
+    }
+
+    .consult-submit {
+      margin-top: 6px;
+      border: none;
+      outline: none;
+      width: 100%;
+      height: 50px;
+      border-radius: 12px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #f3f4f6;
+      background: linear-gradient(90deg, #aeb4c1, #c3c8d3);
+      cursor: default;
+    }
+
+    .consult-privacy {
+      margin-top: 10px;
+      font-size: 0.78rem;
+      color: #6b7280;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .consult-privacy-check {
+      font-size: 0.85rem;
+    }
+
+    /* ======================
+       블로그 링크 카드
+    ======================= */
+    .blog-link-section {
+      margin: 0 0 24px;
+    }
+
+    .blog-link-card {
+      display: block;
+      background: #dbe6ff;
+      border-radius: 26px;
+      padding: 10px 10px 12px;
+      box-shadow: 0 12px 28px rgba(15, 23, 42, 0.35);
+      cursor: pointer;
+      transition: transform 0.18s ease, box-shadow 0.18s ease;
+    }
+
+    .blog-link-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 16px 36px rgba(15, 23, 42, 0.5);
+    }
+
+    .blog-thumb-wrap {
+      border-radius: 20px;
+      overflow: hidden;
+      background: #000;
+    }
+
+    .blog-thumb-wrap img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+    }
+
+    .blog-caption {
+      margin-top: 10px;
+      background: #ffffff;
+      border-radius: 14px;
+      padding: 10px 8px;
+      font-size: 0.86rem;
+      color: #111827;
+      text-align: center;
+      font-weight: 500;
+    }
+
+    /* ======================
+       프로모션 이미지 (첨부한 2개)
+    ======================= */
+    .promo-image {
+      width: 100%;
+      height: auto;
+      border-radius: 16px;
+      display: block;
+    }
+
+    /* ======================
+       반응형 세부 조정
+    ======================= */
+
+    /* 아주 작은 모바일 (예: iPhone SE) */
+    @media (max-width: 380px) {
+      .card {
+        padding: 24px 14px 22px;
+        border-radius: 22px;
+      }
+
+      .profile-name {
+        font-size: 1.6rem;
+      }
+
+      .profile-name span {
+        font-size: 0.95rem;
+      }
+
+      .profile-role {
+        font-size: 0.9rem;
+      }
+
+      .profile-desc {
+        font-size: 0.88rem;
+      }
+
+      .info-badges {
+        justify-content: center;
+      }
+
+      .badge {
+        font-size: 0.7rem;
+        padding: 3px 6px;
+      }
+
+      .consult-card {
+        padding: 16px 14px 14px;
+        border-radius: 20px;
+      }
+
+      .consult-title {
+        font-size: 0.96rem;
+      }
+
+      .consult-sub {
+        font-size: 0.8rem;
+      }
+
+      .consult-field {
+        height: 46px;
+        padding: 0 14px;
+      }
+
+      .consult-submit {
+        height: 46px;
+        font-size: 0.9rem;
+      }
+
+      .blog-link-card {
+        padding: 9px 9px 10px;
+        border-radius: 22px;
+      }
+    }
+
+    /* 중간 폭 이상(태블릿 포함)에서 살짝 넓게 */
+    @media (min-width: 600px) {
+      .page {
+        max-width: 640px;
+      }
+
+      .info-badges {
+        max-width: 520px;
+      }
+
+      .badge {
+        font-size: 0.78rem;
+        padding: 4px 10px;
+      }
+
+      .consult-card {
+        max-width: 520px;
+        margin: 0 auto;
+      }
+
+      .blog-link-card {
+        max-width: 520px;
+        margin: 0 auto;
+      }
+    }
+
+    /* 프로필 사진 높이 축소 (모바일) */
+    @media (max-width: 420px) {
+      .profile-photo-wrap {
+        height: 380px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page">
+    <main class="card">
+
+      <header class="brand">
+        <img src="logo.png" alt="WHOLELIFE Logo" class="brand-logo" />
+        <p class="tagline-small">탄생부터 사후까지, 삶 전체의 재무·리스크를 컨설팅합니다.</p>
+      </header>
+
+      <section class="profile">
+        <div class="profile-photo-wrap">
+          <img src="profile.jpg" alt="신혜미 프로필 사진" />
+        </div>
+
+        <div class="profile-tag">Financial Advisor · 재무컨설팅</div>
+
+        <h1 class="profile-name">신혜미 <span>Shin Hye Mi</span></h1>
+        <div class="profile-role">WHOLELIFE Financial & Risk Management</div>
+
+        <p class="profile-desc">
+          개인과 기업의 전 생애 리스크관리와 자산설계를 기반으로,<br />
+          각 분야 전문가와 협업해 고객님께 꼭 맞는 프리미엄 재무컨설팅을 제공합니다.
+        </p>
+      </section>
+
+      <nav class="link-list">
+
+        <a class="link-item white" href="#" target="_blank">
+          <div class="link-item-main">
+            <div class="link-icon">📋</div>
+            <div>
+              <div class="link-text-title">재무·자산 컨설팅 신청</div>
+              <div class="link-text-sub">현재 상황과 목표를 남겨주세요.</div>
+            </div>
+          </div>
+          <div class="link-arrow">↗</div>
+        </a>
+
+        <!-- 첨부한 이미지 1 -->
+        <img src="pop1.jpg"
+             alt="재무 자산 컨설팅 소개 이미지"
+             class="promo-image">
+
+        <a class="link-item white" href="https://open.kakao.com/o/sEQxxd2h">
+          <div class="link-item-main">
+            <div class="link-icon"><img src="kakao2.jpg" /></div>
+            <div>
+              <div class="link-text-title">카카오톡 1:1 상담</div>
+              <div class="link-text-sub">편하게 문의를 남겨주세요.</div>
+            </div>
+          </div>
+          <div class="link-arrow">↗</div>
+        </a>
+
+        <a class="link-item white" href="https://www.instagram.com/ts_amy_shin/" target="_blank">
+          <div class="link-item-main">
+            <div class="link-icon"><img src="instar2.jpg" /></div>
+            <div>
+              <div class="link-text-title">Instagram @ssshm_i</div>
+              <div class="link-text-sub">재무·정책자금·일상 확인!</div>
+            </div>
+          </div>
+          <div class="link-arrow">↗</div>
+        </a>
+
+        <!-- 첨부한 이미지 2 -->
+        <img src="pop2.jpg"
+             alt="컨설팅 영역 안내 이미지"
+             class="promo-image">
+
+        <a class="link-item white" href="tel:01024009251">
+          <div class="link-item-main">
+            <div class="link-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                   stroke="#0b1120" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.14A19.5 19.5 0 0 1 3.22 10.8 19.79 19.79 0 0 1.08 2.18 2 2 0 0 1 2 0h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81A2 2 0 0 1 7 6L5.78 7.22a16 16 0 0 0 6 6L13 12.94a2 2 0 0 1 2.47.7 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 20 16z"/>
+              </svg>
+            </div>
+            <div>
+              <div class="link-text-title">전화 상담 연결</div>
+              <div class="link-text-sub">Mobile 010-2400-9251</div>
+            </div>
+          </div>
+          <div class="link-arrow">→</div>
+        </a>
+
+      </nav>
+
+      <!-- 블로그 링크 카드 -->
+      <section class="blog-link-section">
+        <a class="blog-link-card" href="https://blog.naver.com/syvdpy2109/223611118255" target="_blank">
+          <div class="blog-thumb-wrap">
+            <img src="wholelife-blog.jpg" alt="홀라이프 자산관리 회사 소개글" />
+          </div>
+          <div class="blog-caption">
+            홀라이프 자산관리 회사 소개글 🪄
+          </div>
+        </a>
+      </section>
+
+      <!-- 상담 신청 박스 -->
+      <section class="consult-section">
+        <div class="consult-card">
+          <h2 class="consult-title">상담 신청</h2>
+          <p class="consult-sub">카톡/문자로 먼저 상담예약 도와드립니다 ^^</p>
+
+          <form class="consult-form">
+            <div class="consult-field">
+              <input
+                type="text"
+                class="consult-input"
+                placeholder="이름을 입력해주세요"
+              />
+            </div>
+
+            <div class="consult-field">
+              <div class="consult-phone-row">
+                <div class="consult-country">
+                  <span class="consult-flag">🇰🇷</span>
+                  <span class="consult-country-arrow">▾</span>
+                  <span>+82</span>
+                </div>
+                <input
+                  type="tel"
+                  class="consult-input consult-phone-input"
+                  placeholder="휴대폰번호"
+                />
+              </div>
+            </div>
+
+            <button type="button" class="consult-submit">
+              제출하기
+            </button>
+
+            <p class="consult-privacy">
+              <span class="consult-privacy-check">✔</span>
+              <span>[필수] 개인정보 수집 및 이용과 광고성 정보 수신 동의</span>
+            </p>
+          </form>
+        </div>
+      </section>
+
+      <section class="social-bar">
+        <a class="social-btn" href="https://www.instagram.com/ts_amy_shin/" target="_blank">
+          <img src="instar2.jpg" />
+        </a>
+        <a class="social-btn" href="https://open.kakao.com/o/sEQxxd2h" target="_blank">
+          <img src="kakao2.jpg" />
+        </a>
+        <a class="social-btn" href="https://blog.naver.com/syvdpy2109/223611118255">
+          <img src="blog.jpg" />
+        </a>
+        <a class="social-btn" href="https://www.youtube.com/watch?v=Zm0gW4UPUwA" target="_blank">
+          <img src="youtube2.jpg" />
+        </a>
+      </section>
+
+      <section class="video-section">
+        <a class="video-link-card"
+           href="https://www.youtube.com/watch?v=Zm0gW4UPUwA"
+           target="_blank">
+          <div class="video-link-inner">
+            <div class="video-thumb">
+              <img src="youtube2.jpg" alt="YouTube" />
+            </div>
+            <div>
+              <div class="video-text-title">WHOLELIFE 소개 영상 보러가기</div>
+              <div class="video-text-sub">클릭 시 YouTube에서 재생됩니다.</div>
+            </div>
+          </div>
+        </a>
+      </section>
+
+      <section class="info">
+        <div class="info-title">전문 분야 · Consulting Area</div>
+        <div class="info-badges">
+          <span class="badge">생명·손해보험 리스크관리</span>
+          <span class="badge">재무·은퇴설계</span>
+          <span class="badge">변액펀드 수익률 관리</span>
+          <span class="badge">자산증식 & 자산이전</span>
+          <span class="badge">정책자금·사업자금 컨설팅</span>
+          <span class="badge">상속·증여·가업승계 플랜</span>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <div><strong>CONTACT</strong> · Mobile 010-2400-9251</div>
+        <div>E-mail : <a href="mailto:hailety133@naver.com">hailety133@naver.com</a></div>
+        <div><strong>PROFILE</strong> · WHOLELIFE Financial Advisor 신혜미</div>
+      </footer>
+
+    </main>
+  </div>
+</body>
+</html>
